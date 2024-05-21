@@ -46,7 +46,6 @@
         <a href="#services">Layanan Kami</a>
         <a href="#portofolio">Portofolio</a>
         <a href="#contact">Hubungi Kami</a>
-        <a href="#testimoni">Testimoni</a>
       </div>
 
       <div class="navbar-extra">
@@ -341,23 +340,29 @@
           class="map"
         ></iframe>
 
-        <form id="contactForm">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="fcd54663-576b-42be-853c-4089cc658677"
+          />
           <div class="input-group">
             <i data-feather="user"></i>
-            <input id="name" type="text" placeholder="Nama" />
+            <input name="name" type="text" placeholder="Nama" required/>
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input id="phone" type="text" placeholder="No HP" />
+            <input name="phone" type="text" placeholder="No HP" required/>
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input id="email" type="text" placeholder="Email" />
+            <input name="email" type="text" placeholder="Email" required/>
           </div>
           <div class="input-group large-input">
             <textarea
-              id="message"
+              name="message"
               placeholder="Ceritakan permasalahan anda untuk konsultasi"
+              required
             ></textarea>
           </div>
           <button class="btn">
@@ -402,7 +407,6 @@
         <a href="#order">Cara Pemesanan</a>
         <a href="#services">Layanan Kami</a>
         <a href="#contact">Hubungi Kami</a>
-        <a href="#testimoni">Testimoni</a>
         <a href="#portfolio">Portofolio</a>
       </div>
 
