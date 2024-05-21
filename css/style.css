@@ -437,6 +437,31 @@ body {
   transform: scale(0.95);
 }
 
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  display: flex;
+  bottom: 30px;
+  right: 20px;
+  background-color: #25D366;
+  padding: 19px;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background-color: #1EBEA5;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+
 /* Footer Section */
 footer {
   background-color: var(--primary);

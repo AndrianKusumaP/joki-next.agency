@@ -14,3 +14,11 @@ document.addEventListener('click', function(e){
     navbarNav.classList.remove('active');
   }
 });
+
+// WhatsApp Button
+document.getElementById('whatsappBtn').addEventListener('click', function() {
+  var phoneNumber = '6282340136885';
+  var message = 'Halo, saya tertarik dengan layanan Anda.';
+  var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+  window.open(url, '_blank');
+});
