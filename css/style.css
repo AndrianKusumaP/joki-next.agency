@@ -443,7 +443,7 @@ body {
   display: flex;
   bottom: 30px;
   right: 20px;
-  background-color: #25D366;
+  background-color: #25d366;
   padding: 19px;
   border-radius: 50%;
   color: white;
@@ -454,7 +454,7 @@ body {
 }
 
 .whatsapp-button:hover {
-  background-color: #1EBEA5;
+  background-color: #1ebea5;
 }
 
 .whatsapp-icon {
@@ -481,6 +481,9 @@ footer .socials a {
 }
 
 footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 1.4rem;
 }
 
@@ -608,6 +611,18 @@ footer .credit a {
     font-size: 1.4rem;
   }
 
+  .services .row .services-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .services .row .services-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .services .row .services-card p {
+    font-size: 1.3rem;
+  }
+
   .contact .row {
     flex-wrap: wrap;
   }
@@ -618,6 +633,29 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
+  }
+
+  .container .box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container .box h3 {
+    font-size: 2.4rem;
+  }
+
+  .container .box p {
+    font-size: 1.6rem;
+  }
+
+  footer .links a {
+    flex: 1 1 30%;
+  }
+
+  .whatsapp-button {
+    bottom: 10px;
+    right: 20px;
+    padding: 12px;
   }
 }
 
@@ -637,6 +675,26 @@ footer .credit a {
 
   .services .row .services-card {
     width: calc(100% - 2rem);
+  }
+
+  .container .box {
+    align-items: center;
+    gap: 4.5rem;
+  }
+
+  .container .box .about-box:nth-child(1),
+  .container .box .about-box:nth-child(3) {
+    align-self: center;
+  }
+
+  .whatsapp-button {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px;
+  }
+
+  .swiper {
+    padding-bottom: 3.6rem;
   }
 }
 

@@ -15,6 +15,11 @@ document.addEventListener('click', function(e){
   }
 });
 
+hamburger.onclick = (e) => {
+  e.preventDefault(); // Mencegah default anchor behavior
+  navbarNav.classList.toggle('active');
+}
+
 // WhatsApp Button
 document.getElementById('whatsappBtn').addEventListener('click', function() {
   var phoneNumber = '6282340136885';
