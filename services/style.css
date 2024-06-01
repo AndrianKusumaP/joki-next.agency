@@ -79,7 +79,7 @@ body {
 
 /* Hero Section */
 .hero {
-  margin-top: 9vh;
+  margin-top: 10vh;
   background: linear-gradient(180deg, #fac48d 0%, #f08619 100%);
   min-height: 80vh;
   display: flex;
@@ -120,9 +120,14 @@ body {
 }
 
 /* About Section */
+.about,
+.how-to,
+.pricing {
+  padding: 2rem 7% 1.4rem;
+}
+
 .about {
   display: flex;
-  padding: 4rem 7% 1.4rem;
   text-align: justify;
 }
 
@@ -149,6 +154,145 @@ body {
 
 .about .about-text p {
   font-size: 1.2rem;
+}
+
+/* How to Section */
+.how-to h2,
+.pricing h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #632601;
+}
+
+.how-to h2 span,
+.pricing h2 span {
+  color: var(--primary);
+}
+
+.how-to .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.how-to .row .how-to-card {
+  text-align: center;
+  width: 20%;
+  padding-bottom: 4rem;
+}
+
+.how-to .row .how-to-card img {
+  border-radius: 50%;
+  border: 1px #c7c5c5 solid;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80%;
+}
+
+.how-to .row .how-to-card .how-to-title {
+  margin-top: 1rem;
+  color: #632601;
+}
+
+/* Pricing Section */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.pricing-cards .card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  width: 300px;
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 15px rgba(140, 152, 164, 0.2);
+}
+
+.pricing-cards .card h3 {
+  text-align: center;
+  color: #f08619;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-cards .card img {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 80px;
+  height: 80px;
+}
+
+.pricing-cards .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-cards .card ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.pricing-cards .card ul li:before {
+  content: '✔';
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+}
+
+.pricing-cards .card ul li.unavailable:before {
+  content: '✘';
+  color: #e74c3c;
+}
+
+.pricing-cards .card ul li.unavailable {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pricing-cards .price {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: #e74c3c;
+}
+
+.pricing-cards .price span {
+  display: block;
+  font-size: 1.2rem;
+  color: #2ecc71;
+}
+
+.price del {
+  text-decoration: line-through;
+}
+
+.pricing-cards button {
+  display: block;
+  width: 100%;
+  background: #F08619;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pricing-cards button:hover {
+  background: #c96a18;
 }
 
 /* WhatsApp Button */
@@ -270,11 +414,15 @@ footer .credit a {
     width: 24px;
     height: 24px;
   }
-  
+
+  .hero {
+    margin-top: 8vh;
+  }
+
   .hero p {
     text-align: center;
   }
-  
+
   .about {
     flex-wrap: wrap;
   }
@@ -296,12 +444,34 @@ footer .credit a {
   .about .about-text p {
     font-size: 1.6rem;
   }
+
+  .how-to .row .how-to-card {
+    width: 40%;
+  }
+
+  .how-to .row .how-to-card .how-to-title {
+    font-size: 1.5rem;
+  }
+
+
 }
 
 /* Mobile */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  .hero {
+    margin-top: 6vh;
+  }
+
+  .how-to .row .how-to-card {
+    width: 80%;
+  }
+
+  .how-to .row .how-to-card img {
+    max-width: 150px;
   }
 
   .whatsapp-button {
@@ -314,7 +484,7 @@ footer .credit a {
     width: 20px;
     height: 20px;
   }
-  
+
   .hero .card-container {
     margin-left: 2rem;
     margin-right: 2rem;
