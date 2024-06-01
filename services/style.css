@@ -1,0 +1,326 @@
+:root {
+  --primary: #f08619;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background: linear-gradient(to right, #c35d1d, #b37134);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-nav a {
+  color: #fafaeb;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-logo img {
+  height: 5rem;
+  width: 8rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #d2a271;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #d2a271;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fafaeb;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #d2a271;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 9vh;
+  background: linear-gradient(180deg, #fac48d 0%, #f08619 100%);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
+.hero h1 {
+  font-size: 3.4rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+}
+
+.hero .card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  margin-top: 2.8rem;
+}
+
+.hero .card-container .card {
+  background-color: #6c3c0b;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 6rem;
+  width: 14rem;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  padding: 4rem 7% 1.4rem;
+  text-align: justify;
+}
+
+.about .about-image {
+  flex: 1 1 30rem;
+}
+
+.about .about-image img {
+  width: 100%;
+}
+
+.about .about-text {
+  flex: 1 1 45rem;
+  padding-left: 1rem;
+  padding-right: 5rem;
+  align-content: center;
+}
+
+.about .about-text h3 {
+  color: #632601;
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.about .about-text p {
+  font-size: 1.2rem;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  display: flex;
+  bottom: 30px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 19px;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebea5;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: black;
+  margin: 1rem;
+}
+
+footer .email {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer .email p {
+  color: black;
+  padding-left: 0.8rem;
+}
+
+footer .email a {
+  color: black;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: black;
+}
+
+footer .credit a {
+  color: black;
+  font-weight: bold;
+}
+
+/* Media query */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #b37134;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fafaeb;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .whatsapp-button {
+    bottom: 12px;
+    right: 20px;
+    padding: 12px;
+  }
+
+  .whatsapp-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .hero p {
+    text-align: center;
+  }
+  
+  .about {
+    flex-wrap: wrap;
+  }
+
+  .about .about-image img {
+    object-position: center;
+  }
+
+  .about .about-text {
+    padding: 0;
+  }
+
+  .about .about-text h3 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .about .about-text p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .whatsapp-button {
+    bottom: 14px;
+    right: 14px;
+    padding: 10px;
+  }
+
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hero .card-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.navbar:not(.hamburger-active) .navbar-nav {
+  margin-left: auto;
+}
