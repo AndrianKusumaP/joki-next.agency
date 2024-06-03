@@ -10,6 +10,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  list-style: none;
 }
 
 html {
@@ -22,6 +23,11 @@ body {
 }
 
 /* Navbar */
+.navbar .navbar-logo img {
+  height: 5rem;
+  width: 8rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -35,16 +41,15 @@ body {
   z-index: 9999;
 }
 
+.navbar .navbar-nav {
+  display: flex;
+}
+
 .navbar .navbar-nav a {
   color: #fafaeb;
   display: inline-block;
   font-size: 1.1rem;
   margin: 0 1rem;
-}
-
-.navbar .navbar-logo img {
-  height: 5rem;
-  width: 8rem;
 }
 
 .navbar .navbar-nav a:hover {
@@ -77,6 +82,35 @@ body {
   display: none;
 }
 
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #b37134;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu .menu-item {
+  padding: 10px 20px;
+}
+
+.sub-menu .menu-item a {
+  color: #fafaeb;
+}
+
+.sub-menu .menu-item a:hover {
+  color: #d2a271;
+}
+
 /* Hero Section */
 .hero {
   margin-top: 10vh;
@@ -104,6 +138,7 @@ body {
   flex-direction: row;
   gap: 1.6rem;
   margin-top: 2.8rem;
+  flex-wrap: wrap;
 }
 
 .hero .card-container .card {
@@ -246,14 +281,14 @@ body {
 }
 
 .pricing-cards .card ul li:before {
-  content: '✔';
+  content: "✔";
   color: #27ae60;
   position: absolute;
   left: 0;
 }
 
 .pricing-cards .card ul li.unavailable:before {
-  content: '✘';
+  content: "✘";
   color: #e74c3c;
 }
 
@@ -282,7 +317,7 @@ body {
 .pricing-cards button {
   display: block;
   width: 100%;
-  background: #F08619;
+  background: #f08619;
   color: #fff;
   border: none;
   padding: 0.75rem;
@@ -396,6 +431,14 @@ footer .credit a {
     right: 0;
   }
 
+  .navbar .navbar-nav {
+    display: block;
+  }
+
+  .navbar .navbar-nav .menu-item .sub-menu {
+    box-shadow: none;
+  }
+
   .navbar .navbar-nav a {
     color: #fafaeb;
     display: block;
@@ -421,6 +464,10 @@ footer .credit a {
 
   .hero p {
     text-align: center;
+  }
+
+  .hero .card-container {
+    justify-content: center;
   }
 
   .about {
@@ -452,8 +499,6 @@ footer .credit a {
   .how-to .row .how-to-card .how-to-title {
     font-size: 1.5rem;
   }
-
-
 }
 
 /* Mobile */

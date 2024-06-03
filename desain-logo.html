@@ -7,7 +7,7 @@
 
     <link
       rel="shortcut icon"
-      href="../img/logo_garis.svg"
+      href="img/logo_garis.svg"
       type="image/x-icon"
     />
 
@@ -36,22 +36,38 @@
     />
 
     <!-- Style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/services_style.css" />
   </head>
   <body>
     <!-- Navbar Start -->
     <nav class="navbar">
-      <a href="#" class="navbar-logo"
-        ><img src="/img/logo_garis.png" alt="logo"
-      /></a>
+      <a href="#" class="navbar-logo">
+        <img src="/img/logo_garis.png" alt="logo" />
+      </a>
 
-      <div class="navbar-nav">
-        <a href="#home">Beranda</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#order">Cara Pemesanan</a>
-        <a href="#services">Layanan Kami</a>
-        <a href="#portofolio">Portofolio</a>
-        <a href="#contact">Hubungi Kami</a>
+      <div class="navbar-nav" id="navbarNav">
+        <a href="index.html">Beranda</a>
+        <div class="menu-item menu-item-has-children">
+          <a href="#" data-toggle="sub-menu">Layanan Kami</a>
+          <ul class="sub-menu">
+            <li class="menu-item">
+              <a href="desain-logo.html">Desain Logo</a>
+            </li>
+            <li class="menu-item">
+              <a href="desain-mockup.html">Desain Mockup</a>
+            </li>
+            <li class="menu-item">
+              <a href="desain-grafis.html">Desain Grafis</a>
+            </li>
+            <li class="menu-item">
+              <a href="dokumentasi.html">Dokumentasi</a>
+            </li>
+            <li class="menu-item"><a href="konten.html">Konten</a></li>
+            <li class="menu-item">
+              <a href="editing.html">Editing Foto & Video</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="navbar-extra">
@@ -91,7 +107,7 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="./img/about.png" alt="about" />
+        <img src="img/services/about.png" alt="about" />
       </div>
     </section>
     <!-- About Section End -->
@@ -102,23 +118,23 @@
 
       <div class="row">
         <div class="how-to-card">
-          <img src="/services/img/1.png" alt="1" />
+          <img src="/img/services/1.png" alt="1" />
           <h3 class="how-to-title">Konsultasi Desainmu</h3>
         </div>
         <div class="how-to-card">
-          <img src="/services/img/2.png" alt="2" />
+          <img src="/img/services/2.png" alt="2" />
           <h3 class="how-to-title">Briefing tim untuk proses desain</h3>
         </div>
         <div class="how-to-card">
-          <img src="/services/img/3.png" alt="3" />
+          <img src="/img/services/3.png" alt="3" />
           <h3 class="how-to-title">Proses pembuatan konsep desain</h3>
         </div>
         <div class="how-to-card">
-          <img src="/services/img/4.png" alt="4" />
+          <img src="/img/services/4.png" alt="4" />
           <h3 class="how-to-title">Feedback dan revisi hasil desain</h3>
         </div>
         <div class="how-to-card">
-          <img src="/services/img/5.png" alt="5" />
+          <img src="/img/services/5.png" alt="5" />
           <h3 class="how-to-title">Dapatkan hasil sesuai keinginanmu</h3>
         </div>
       </div>
@@ -131,10 +147,7 @@
       <div class="pricing-cards">
         <div class="card">
           <h3>Simple Package</h3>
-          <img
-            src="img/simple.png"
-            alt="Simple Package Icon"
-          />
+          <img src="img/services/simple.png" alt="Simple Package Icon" />
           <ul>
             <li>1 Pilihan Konsep Logo</li>
             <li>Selesai dalam 2 - 3 Hari</li>
@@ -150,14 +163,13 @@
           <p class="price">
             <del>Rp. 500.000</del><br /><span>Hanya Rp. 200.000</span>
           </p>
-          <a href="https://wa.me/6282340136885?" target="_blank"><button>Order</button></a>
+          <a href="https://wa.me/6282340136885?" target="_blank"
+            ><button>Order</button></a
+          >
         </div>
         <div class="card">
           <h3>Express Package</h3>
-          <img
-            src="img/express.png"
-            alt="Express Package Icon"
-          />
+          <img src="img/services/express.png" alt="Express Package Icon" />
           <ul>
             <li>2 Pilihan Konsep Logo</li>
             <li>Selesai dalam 2 Hari</li>
@@ -173,14 +185,13 @@
           <p class="price">
             <del>Rp. 600.000</del><br /><span>Hanya Rp. 349.000</span>
           </p>
-          <a href="https://wa.me/6282340136885?" target="_blank"><button>Order</button></a>
+          <a href="https://wa.me/6282340136885?" target="_blank"
+            ><button>Order</button></a
+          >
         </div>
         <div class="card">
           <h3>Complete Package</h3>
-          <img
-            src="img/complete.png"
-            alt="Complate Package Icon"
-          />
+          <img src="img/services/complete.png" alt="Complate Package Icon" />
           <ul>
             <li>3 Pilihan Konsep Logo</li>
             <li>Selesai dalam 2 Hari</li>
@@ -196,7 +207,9 @@
           <p class="price">
             <del>Rp. 1.000.000</del><br /><span>Hanya Rp. 700.000</span>
           </p>
-          <a href="https://wa.me/6282340136885?" target="_blank"><button>Order</button></a>
+          <a href="https://wa.me/6282340136885?" target="_blank"
+            ><button>Order</button></a
+          >
         </div>
       </div>
     </section>
@@ -205,7 +218,7 @@
 
     <!-- WhatsApp Icon -->
     <button class="whatsapp-button" id="whatsappBtn">
-      <img src="../img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+      <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
     </button>
 
     <!-- Footer Start-->
@@ -215,7 +228,7 @@
           ><i data-feather="instagram"></i
         ></a>
         <a href="https://wa.me/6282340136885?" target="_blank"
-          ><img src="../img/whatsapp.png" width="24px"
+          ><img src="img/whatsapp.png" width="24px"
         /></a>
       </div>
 
@@ -236,6 +249,6 @@
     </script>
 
     <!-- Javascript -->
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
